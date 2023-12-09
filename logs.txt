@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  7/12/2023
 
 final grade working
@@ -6,3 +7,8 @@ final grade working
 next objective
 add task
 view scores
+=======
+--06/12/2023 [f - function || nf - no function]
+dashboard.php - f
+assign_stud.php - nf
+>>>>>>> fc36976b5b44b16f4ec55a774dd79d9659277298
