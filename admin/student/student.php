@@ -20,13 +20,14 @@ $sql = "SELECT * FROM student_info";
 $result = $conn->query($sql);
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/sol/admin/css/student.css"/>
+    <link rel="stylesheet" href="/sol/admin/css/students.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
 </head>
 <body>
@@ -105,14 +106,14 @@ $result = $conn->query($sql);
                 <i class="fas fa-home"></i>
                 <span class="nav-item">Dashboard</span>
             </a></li>
-            <li><a href="\sol\admin\students\students.php">
+            <li><a href="\sol\admin\student\student.php">
                 <i class="fas fa-user"></i>
-                <span class="nav-item">Students</span>
+                <span class="nav-item">Student  </span>
             </a></li>
-            <li><a href="\sol\admin\subjects\subject.php"><i class="fas fa-tasks"></i>
+            <li><a href="\sol\admin\subject\subject.php"><i class="fas fa-tasks"></i>
                 <span class="nav-item">Subject</span>
             </a></li>
-            <li><a href="\sol\login\index.php" class="logout"><i class="fas fa-sign-out-alt"></i>
+            <li><a href="\sol\index.php" class="logout"><i class="fas fa-sign-out-alt"></i>
                 <span class="nav-item">Log out</span>
             </a></li>
         </ul>
@@ -171,6 +172,7 @@ $result = $conn->query($sql);
         modal.style.display = 'none';
         }
     </script>
+
     <div id="assignSubjectModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeSubjectsModal()">&times;</span>
@@ -198,7 +200,9 @@ $result = $conn->query($sql);
             <span class="close" onclick="closedeleteStudentsModal()">&times;</span>
             <?php include 'delete_stud.php'; ?>
         </div>
-    </div><div id="assignSubjectModal" class="modal">
+    </div>
+
+    <div id="assignSubjectModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeSubjectsModal()">&times;</span>
             <?php include 'assign_stud.php'; ?>

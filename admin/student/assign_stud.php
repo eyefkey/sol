@@ -1,17 +1,12 @@
 <?php
-// Start the session only if it's not already started
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
+@include 'conf.php';
+@include 'dbconfig.php';
 
 // Check if the user is authenticated as Admin or Faculty
-if (isset($_SESSION['emp_ID'])) {
-    // User is authenticated
-} else {
-    // Redirect to login if the session variable is not set
-    header('location: /sol/index.php');
-    exit();
-}
+
 
 // Replace these with your actual database credentials
 $servername = "localhost";
@@ -51,7 +46,7 @@ $resultSubjects = $conn->query($selectSubjects);
         </section>
         
         <section class="assign-subjects__body">
-            <form action="proc_assignt.php" method="post">
+            <form action="proc_assign.php" method="post">
                 
                 <label for="student">Select Student:</label>
                 <select name="student" id="student">

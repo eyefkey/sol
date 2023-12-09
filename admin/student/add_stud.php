@@ -1,6 +1,6 @@
 <?php
 // Include your database configuration file
-include 'config.php';
+include 'conf.php';
 include 'dbconfig.php';
 
 // Initialize variables
@@ -27,7 +27,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         VALUES ('$studID', '$fname', '$mname', '$lname', '$yrLvl', '$semester', '$section', '$email')";
 
         if (mysqli_query($conn, $insertQuery)) {
-            $message = "Student added successfully.";
+           
+            header('location: /sol/admin/student/student.php');
+            exit();
         } else {
             $message = "Error: " . mysqli_error($conn);
         }
@@ -79,7 +81,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "<p>$message</p>";
     }
     ?>
-
-    <p><a href="student.php">Back to Students</a></p>
 </body>
 </html>

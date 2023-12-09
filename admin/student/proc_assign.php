@@ -1,14 +1,9 @@
 <?php
 session_start();
-@include 'config.php';
+@include 'conf.php';
 @include 'dbconfig.php';
 
-// Check if the user is authenticated as Admin or Faculty
-if (!isset($_SESSION['emp_ID'])) {
-    // Redirect to login if the session variable is not set
-    header('location: /sol/index.php');
-    exit();
-}
+
 
 // Replace these with your actual database credentials
 $servername = "localhost";

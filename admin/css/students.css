@@ -590,13 +590,13 @@ tbody td.active {
   display: inline-block;
   width: 2rem;
   height: 2rem;
-  background: #fff6 url(images/export.png) center / 80% no-repeat;
+  background: #801818 url(/sol/img/SELECT.png) center / 100% no-repeat;
   border-radius: 50%;
   transition: 0.2s ease-in-out;
 }
 
 .export__file .export__file-btn:hover {
-  background-color: #fff;
+  background-color: #000000;
   transform: scale(1.15);
   cursor: pointer;
 }
