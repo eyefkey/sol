@@ -85,8 +85,6 @@ $conn->close();
                 <label for="task_date">Task Date:</label>
                 <input type="date" name="task_date" required>
 
-                <label for="task_description">Task Description:</label>
-                <textarea name="task_description" rows="4" required></textarea>
 
                 <button type="submit">Add Task</button>
             </form>
