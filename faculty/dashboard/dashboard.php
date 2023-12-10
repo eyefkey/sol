@@ -73,11 +73,16 @@ if ($conn->connect_error) {
     // Check if the query was successful
     if ($resultSubjects !== false && mysqli_num_rows($resultSubjects) > 0) {
         // Output data of each row
+
         while ($row = mysqli_fetch_assoc($resultSubjects)) {
+
             echo "<tr><td>" . $row['sub_ID'] . "</td><td>" . $row['sub_name'] . "</td><td>" . $row['semester'] . "</td><td>" . $row['units'] . "</td><td>" . $row['school_year'] . "</td>";
+
             // Add the "Manage" action link with a dynamic URL
             echo "<td><a class='action-link' href='/sol/faculty/dashboard/student_manage.php?sub_ID=" . $row['sub_ID'] . "'>Manage</a></td></tr>";
+
         }
+        
     } else {
         echo "<tr><td colspan='6'>No subjects assigned to this faculty</td></tr>";
     }

@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manage Students</title>
-    <link rel="stylesheet" href="/sol/faculty/css/student_manage.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link rel="stylesheet" href="/sol/faculty/css/student_manage.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 </head>
+
 <body>
+    <?php    ?>
+    <main class="table">
+        
+        <section class="table__header">
+            <h1>Manage Students</h1>
+        </section>
 
-<main class="table">
-    <section class="table__header">
-        <h1>Manage Students</h1>
-    </section>
+        <section class="table__body">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Full Name</th>
+                        <th> Action </th>
+                    </tr>
+                </thead>
+                <tbody>
 
-    <section class="table__body">
-        <table>
-            <thead>
-                <tr>
-                    <th>Student ID</th>
-                    <th>Full Name</th>
-                    <th> Action </th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
+                    <?php
                     // Start the session (if not already started)
                     session_start();
                     @include 'conf.php';
@@ -55,7 +59,7 @@
 
                     // Assuming you have a column named 'sub_ID' in the 'rec_info' table
                     $sub_ID = $_GET['sub_ID']; // Assuming you pass the sub_ID as a parameter in the URL
-
+                
                     // Execute your query to retrieve assigned students for the subject from 'rec_info'
                     $selectStudents = "SELECT rec_info.rec_ID, student_info.stud_ID, student_info.stud_lname, student_info.stud_mname, student_info.stud_fname 
                    FROM rec_info 
@@ -73,50 +77,51 @@
                             echo "<td>" . $fullName . "</td>";
                             echo "<td>";
                             if (isset($row['rec_ID'])) {
-                                echo "<a class='action-link' href='/sol/faculty/dashboard/grade_manage.php?rec_ID=" . $row['rec_ID'] . "'>Manage</a>";
+                                echo "<a class='action-link' href='/sol/faculty/dashboard/grade_manage.php?rec_ID=" . $row['rec_ID'] ."&sub_ID"."=".$sub_ID. "'>Manage</a>";
                             } else {
                                 echo "N/A";
                             }
                             echo "</td></tr>";
-                                                    }
+                        }
                     } else {
                         echo "<tr><td colspan='2'>No students assigned to this subject</td></tr>";
                     }
 
                     // Close the database connection
                     $conn->close();
-                ?>
-            </tbody>
-        </table>
-    </section>
-</main>
+                    ?>
+                </tbody>
+            </table>
+        </section>
+    </main>
 
-<nav>
-    <ul>
-        <li>
-            <a href="#" class="logo">
-                <img src="/sol/img/sol.png" alt="">
-                <span class="nav-item"> SOL - CRMS</span>
-            </a>
-        </li>
-        <li><a href="\sol\faculty\dashboard\dashboard.php">
-            <i class="fas fa-home"></i>
-            <span class="nav-item">Dashboard</span>
-        </a></li>
-        <li><a href="\sol\faculty\analytic\analytic.php">
-            <i class="fas fa-user"></i>
-            <span class="nav-item">Analytics</span>
-        </a></li>
-        <li><a href="\sol\index.php" class="logout">
-            <i class="fas fa-sign-out-alt"></i>
-            <span class="nav-item">Log out</span>
-        </a></li>
-    </ul>
-</nav>
+    <nav>
+        <ul>
+            <li>
+                <a href="#" class="logo">
+                    <img src="/sol/img/sol.png" alt="">
+                    <span class="nav-item">SOL - CRMS</span>
+                </a>
+            </li>
+            <li><a href="\sol\faculty\dashboard\dashboard.php">
+                    <i class="fas fa-home"></i>
+                    <span class="nav-item">Dashboard</span>
+                </a></li>
+            <li><a href="\sol\faculty\analytic\analytic.php">
+                    <i class="fas fa-user"></i>
+                    <span class="nav-item">Analytics</span>
+                </a></li>
+            <li><a href="\sol\index.php" class="logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span class="nav-item">Log out</span>
+                </a></li>
+        </ul>
+    </nav>
 
-<script>
-    // Your JavaScript functions here
-</script>
+    <script>
+        // Your JavaScript functions here
+    </script>
 
 </body>
+
 </html>

@@ -24,6 +24,7 @@ $recID = $finalGrade = $remarks = "";
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get form data
+    $sub_ID = $_POST['sub_ID'];
     $recID = $_POST['rec_ID'];
     $finalGrade = $_POST['final_grade'];
     $remarks = $_POST['remarks'];
@@ -35,8 +36,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (mysqli_query($conn, $insertGrade)) {
         // Grade added successfully, redirect to student_manage.php
-        header('location: student_manage.php?rec_ID=' . $recID);
+
+        header('location: student_manage.php?sub_ID=' . $sub_ID);
         exit();
+
     } else {
         echo "Error: " . $insertGrade . "<br>" . mysqli_error($conn);
     }
@@ -48,14 +51,17 @@ $conn->close();
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Final Grade</title>
-    <link rel="stylesheet" href="/sol/faculty/css/faculty.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link rel="stylesheet" href="/sol/faculty/css/faculty.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 </head>
+
 <body>
+    <?php echo $recID; ?>
     <main class="form">
         <section class="form__header">
             <h1>Add Final Grade</h1>
@@ -63,7 +69,8 @@ $conn->close();
         <section class="form__body">
             <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
                 <input type="hidden" name="rec_ID" value="<?php echo htmlspecialchars($_GET['rec_ID']); ?>">
-                
+                <input type="hidden" name="sub_ID" value="<?php echo htmlspecialchars($_GET['sub_ID']); ?>">
+
                 <label for="final_grade">Final Grade:</label>
                 <input type="text" name="final_grade" required>
 
@@ -83,18 +90,19 @@ $conn->close();
                 </a>
             </li>
             <li><a href="\sol\faculty\dashboard\dashboard.php">
-                <i class="fas fa-home"></i>
-                <span class="nav-item">Dashboard</span>
-            </a></li>
+                    <i class="fas fa-home"></i>
+                    <span class="nav-item">Dashboard</span>
+                </a></li>
             <li><a href="\sol\faculty\analytic\analytic.php">
-                <i class="fas fa-user"></i>
-                <span class="nav-item">Analytics</span>
-            </a></li>
+                    <i class="fas fa-user"></i>
+                    <span class="nav-item">Analytics</span>
+                </a></li>
             <li><a href="\sol\index.php" class="logout">
-                <i class="fas fa-sign-out-alt"></i>
-                <span class="nav-item">Log out</span>
-            </a></li>
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span class="nav-item">Log out</span>
+                </a></li>
         </ul>
     </nav>
 </body>
+
 </html>
