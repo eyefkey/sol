@@ -4,14 +4,14 @@
 @include 'conf.php';
 @include 'dbconfig.php';
 
-// Check if the user is authenticated as Faculty
-if (isset($_SESSION['user_ID'])) {
-    $facultyID = $_SESSION['user_ID']; // Get the faculty's ID
-} else {
-    // Redirect to login if the session variable is not set
-    header('location: /sol/index.php');
-    exit();
-}
+// // Check if the user is authenticated as Faculty
+// if (isset($_SESSION['user_ID'])) {
+//     $facultyID = $_SESSION['user_ID']; // Get the faculty's ID
+// } else {
+//     // Redirect to login if the session variable is not set
+//     header('location: /sol/index.php');
+//     exit();
+// }
 
 // Replace these with your actual database credentials
 $servername = "localhost";
