@@ -27,11 +27,14 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Retrieve grades from the activity_info table
-$selectGrades = "SELECT act_name, act_date, score FROM activity_info WHERE rec_ID = '$recID'";
+if (isset($_GET['rec_ID'])){
 
-$resultGrades = mysqli_query($conn, $selectGrades);
+    $recID = $_GET['rec_ID'];
+    $sub_ID = $_GET['sub_ID'];
 
+    $selectGrades = "SELECT act_name, act_date, score FROM activity_info WHERE rec_ID = '$recID'";
+    $resultGrades = mysqli_query($conn, $selectGrades);
+}
 // Check if the query was successful
 if ($resultGrades !== false && mysqli_num_rows($resultGrades) > 0) {
     ?>
@@ -41,6 +44,8 @@ if ($resultGrades !== false && mysqli_num_rows($resultGrades) > 0) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>View Grades</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+        <link rel="stylesheet" href="/sol/faculty/css/grade.css" />
         <!-- Add your stylesheets and scripts here -->
     </head>
     <body>
@@ -66,13 +71,8 @@ if ($resultGrades !== false && mysqli_num_rows($resultGrades) > 0) {
                             echo "<td>" . $row['score'] . "</td></tr>";
                         }
                         ?>
-                    </tbody>
-                </table>
-            </section>
-        </main>
-    </body>
-    </html>
-    <?php
+
+<?php
 } else {
     echo "No grades found.";
 }
@@ -80,3 +80,36 @@ if ($resultGrades !== false && mysqli_num_rows($resultGrades) > 0) {
 // Close the database connection
 $conn->close();
 ?>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <nav>
+        <ul>
+            <li>
+                <a href="#" class="logo">
+                    <img src="/sol/img/sol.png" alt="">
+                    <span class="nav-item"> SOL - CRMS</span>
+                </a>
+            </li>
+            <li><a href="\sol\faculty\dashboard\dashboard.php">
+                    <i class="fas fa-home"></i>
+                    <span class="nav-item">Dashboard</span>
+                </a></li>
+            <li><a href="\sol\faculty\analytic\analytic.php">
+                    <i class="fas fa-user"></i>
+                    <span class="nav-item">Analytics</span>
+                </a></li>
+            <li><a href="\sol\index.php" class="logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span class="nav-item">Log out</span>
+                </a></li>
+        </ul>
+    </nav>
+</body>
+</html>

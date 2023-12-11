@@ -60,10 +60,12 @@ if (isset($_GET['rec_ID'])) {
                             style="--clr:#FF1818"><span>Add Final Grade</span><i></i></a>
                     </div>
 
-                    <div class="button2"><a href="/sol/faculty/dashboard/add_activity.php" style="--clr:#1e9bff"><span>Add
+                    <div class="button2">
+                        <a href="/sol/faculty/dashboard/add_activity.php?rec_ID=<?php echo $recID. "&sub_ID=".$sub_ID;?>"
+                         style="--clr:#1e9bff"><span>Add
                                 Activity</span><i></i></a></div>
-                    <div class="button3"><a href="/sol/faculty/dashboard/view_score.php" style="--clr:#39FF14"><span>View
-                                Score</span><i></i></a></div>
+                    <div class="button3"><a href="/sol/faculty/dashboard/view_score.php?rec_ID=<?php echo $recID. "&sub_ID=".$sub_ID;?>"
+                     style="--clr:#39FF14"><span>View Score</span><i></i></a></div>
 
                 </section>
                 <section class="table__body">

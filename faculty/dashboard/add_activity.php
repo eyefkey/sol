@@ -75,18 +75,16 @@ $conn->close();
         <section class="form__body">
             <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
                 <input type="hidden" name="rec_ID" value="<?php echo htmlspecialchars($_GET['rec_ID']); ?>">
-                
-                <label for="sub_ID">Subject Code:</label>
-                <input type="text" name="sub_ID" required>
+                <input type="hidden" name="sub_ID" value="<?php echo htmlspecialchars($_GET['sub_ID']);?> ">
 
-                <label for="task_name">Task Name:</label>
-                <input type="text" name="task_name" required>
+                <label for="sub_name">Activity Name:</label>
+                <input type="text" name="sub_name" required>
 
-                <label for="task_date">Task Date:</label>
-                <input type="date" name="task_date" required>
+                <label for="act_name">Activity Date:</label>
+                <input type="date" name="act_name" required>
 
-                <label for="task_description">Task Description:</label>
-                <textarea name="task_description" rows="4" required></textarea>
+                <label for="score">Score:</label>
+                <input type="text" name="score" required>
 
                 <button type="submit">Add Task</button>
             </form>
