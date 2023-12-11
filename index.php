@@ -22,9 +22,9 @@
             <span>Password</span>
             <i></i>
         </div>
-        <div id="myModal" class="modal" style="<?php echo isset($_GET['error']) ? 'display: block;' : 'display: none;'; ?>">
+        <div id="myModal2" class="modal" style="<?php echo isset($_GET['error']) ? 'display: block;' : 'display: none;'; ?>">
             <div class="modal-content">
-                <span class="close" onclick="closeModal()">&times;</span>
+                <span class="close" onclick="closeModal2()">&times;</span>
                 <p id="error-message"><?php echo isset($_GET['error']) ? htmlspecialchars($_GET['error']) : ''; ?></p>
             </div>
         </div>  
@@ -34,4 +34,9 @@
     </div>
 
 </body>
+    <script>
+    function closeModal2() {
+    document.getElementById('myModal2').style.display = 'none';
+}
+    </script>
 </html>
