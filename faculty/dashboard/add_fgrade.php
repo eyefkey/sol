@@ -34,6 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Insert data into the grade_info table
     $insertGrade = "INSERT INTO grade_info (rec_ID, final_grade, remarks) VALUES ('$recID', '$finalGrade', '$remarks')";
 
+    
     if (mysqli_query($conn, $insertGrade)) {
         // Grade added successfully, redirect to student_manage.php
 

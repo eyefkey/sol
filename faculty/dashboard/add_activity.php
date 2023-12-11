@@ -83,8 +83,8 @@ $conn->close();
                 <label for="act_name">Activity Date:</label>
                 <input type="date" name="act_name" required>
 
-                <label for="score">Score:</label>
-                <input type="text" name="score" required>
+                <label for="task_description">Task Description:</label>
+                <textarea name="task_description" rows="4" required></textarea>
 
                 <button type="submit">Add Task</button>
             </form>
@@ -92,14 +92,24 @@ $conn->close();
     </main>
     <!-- Include your navigation bar or other elements as needed -->
     <nav>
-        <ul>
+    <ul>
             <li>
                 <a href="#" class="logo">
                     <img src="/sol/img/sol.png" alt="">
                     <span class="nav-item"> SOL - CRMS</span>
                 </a>
             </li>
-            <!-- Include other navigation links as needed -->
+            <li><a href="\sol\faculty\dashboard\dashboard.php">
+                <i class="fas fa-home"></i>
+                <span class="nav-item">Dashboard</span>
+            </a></li>
+            <li><a href="\sol\faculty\analytic\analytic.php">
+                <i class="fas fa-user"></i>
+                <span class="nav-item">Analytics</span>
+            </a></li>
+            <li><a href="\sol\index.php" class="logout"><i class="fas fa-sign-out-alt"></i>
+                <span class="nav-item">Log out</span>
+            </a></li>
         </ul>
     </nav>
     <!-- Include your JavaScript files or scripts as needed -->
