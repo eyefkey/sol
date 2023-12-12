@@ -51,7 +51,7 @@ $failedCounts = array_column($data, 'failed_count');
 </nav>
 
 </body>
-<canvas id="myChart" style="width: 50px; height: 20px;"></canvas>
+<canvas id="myChart" width="50" height="50"></canvas>
 
 <script>
 const data = {
