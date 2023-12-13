@@ -53,6 +53,7 @@ if ($result && mysqli_num_rows($result) > 0) {
     <title>Edit Subject</title>
 </head>
 <body>
+    <h1>Edit Subjects</h1>
     <form name="edit" method="post" action="edit_proc.php">
         <label for="sub_ID">Sub ID:</label>
         <input type="text" name="sub_ID" value="<?php echo $sub_ID; ?>" required>
