@@ -67,6 +67,38 @@ $resultSubjects = mysqli_query($conn, $select);
     <title>Assign Subject</title>
 </head>
 <body>
+<style>
+    form {
+        max-width: 300px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    select {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 15px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+</style>
     <h2>Assign Subject</h2>
     <form action="" method="post" id="facultyForm">
         <label for="emp_ID">Faculty ID:</label><br>

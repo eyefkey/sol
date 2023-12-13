@@ -77,6 +77,38 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])) {
 </head>
 <body>
     <h2>Add Employee</h2>
+    <style>
+    form {
+        max-width: 300px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    select {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 15px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+</style>
     <form action="add_emp.php" method="post">
         <input type="text" name="emp_fname" placeholder="First Name" required><br><br>
         <input type="text" name="emp_mname" placeholder="Middle Initial" required><br><br>

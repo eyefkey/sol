@@ -45,7 +45,38 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Add Students</title>
 </head>
 <body>
+<style>
+    form {
+        max-width: 300px;
+        margin: 0 auto;
+        text-align: center;
+    }
 
+    input[type="text"],
+    input[type="password"],
+    select {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 15px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+</style>
     <h1>Add Students</h1>
     <form method="post" action="">
         <!-- Add your input fields for student information -->
@@ -71,9 +102,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <input type="text" id="section" name="section" required><br>
         
         <label for="email_add">Email Address:</label>
-        <input type="email" id="email_add" name="email_add" required><br>
+        <input type="text" id="email_add" name="email_add" required><br>
 
-        <button type="submit">Add Student</button>
+        <input type="submit" name="" value="Add Student">
     </form>
 
     <?php

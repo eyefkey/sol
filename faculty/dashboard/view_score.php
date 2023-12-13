@@ -35,8 +35,6 @@ if (isset($_GET['rec_ID'])){
     $selectGrades = "SELECT act_name, act_date, score FROM activity_info WHERE rec_ID = '$recID'";
     $resultGrades = mysqli_query($conn, $selectGrades);
 }
-// Check if the query was successful
-if ($resultGrades !== false && mysqli_num_rows($resultGrades) > 0) {
     ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -51,7 +49,7 @@ if ($resultGrades !== false && mysqli_num_rows($resultGrades) > 0) {
     <body>
         <main class="table">
             <section class="table__header">
-                <h1>View Grades</h1>
+                <h1>View Scores</h1>
             </section>
             <section class="table__body">
                 <table>
@@ -63,23 +61,21 @@ if ($resultGrades !== false && mysqli_num_rows($resultGrades) > 0) {
                         </tr>
                     </thead>
                     <tbody>
-                        <?php
+                    <?php
+                    if ($resultGrades !== false && mysqli_num_rows($resultGrades) > 0) {
                         // Output data of each row
                         while ($row = mysqli_fetch_assoc($resultGrades)) {
                             echo "<tr><td>" . $row['act_name'] . "</td>";
                             echo "<td>" . $row['act_date'] . "</td>";
                             echo "<td>" . $row['score'] . "</td></tr>";
                         }
-                        ?>
+                    } else {
+                        echo "<tr><td colspan='3'>No grades found.</td></tr>";
+                    }
 
-<?php
-} else {
-    echo "No grades found.";
-}
-
-// Close the database connection
-$conn->close();
-?>
+                    // Close the database connection
+                    $conn->close();
+                    ?>
                     </tbody>
                 </table>
             </section>
@@ -102,7 +98,7 @@ $conn->close();
                     <span class="nav-item">Dashboard</span>
                 </a></li>
             <li><a href="\sol\faculty\analytic\analytic.php">
-                    <i class="fas fa-user"></i>
+                    <i class="fas fa-chart-bar"></i>
                     <span class="nav-item">Analytics</span>
                 </a></li>
             <li><a href="\sol\index.php" class="logout">

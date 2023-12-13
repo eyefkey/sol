@@ -55,8 +55,9 @@ if (isset($_GET['rec_ID'])) {
                             style="--clr:#FF1818"><span>Add Final Grade</span><i></i></a>
                     </div>
 
-                    <div class="button2"><a href="/sol/faculty/dashboard/add_activity.php" style="--clr:#1e9bff"><span>Add
-                                Activity</span><i></i></a></div>
+                    <div class="button2"><a href="/sol/faculty/dashboard/add_activity.php?rec_ID=<?php echo $recID. "&sub_ID=".$sub_ID;?>"
+                      style="--clr:#1e9bff"><span>Add Activity</span><i></i></a></div>
+
                     <div class="button3"><a href="/sol/faculty/dashboard/view_score.php?rec_ID=<?php echo $recID. "&sub_ID=".$sub_ID;?>"
                      style="--clr:#39FF14"><span>View Score</span><i></i></a></div>
 
@@ -101,7 +102,7 @@ $conn->close();
                     <span class="nav-item">Dashboard</span>
                 </a></li>
             <li><a href="\sol\faculty\analytic\analytic.php">
-                    <i class="fas fa-user"></i>
+                    <i class="fas fa-chart-bar"></i>
                     <span class="nav-item">Analytics</span>
                 </a></li>
             <li><a href="\sol\index.php" class="logout">

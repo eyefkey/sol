@@ -23,7 +23,7 @@ $failedCounts = array_column($data, 'failed_count');
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="/sol/faculty/css/analytic.css"/>
+  <link rel="stylesheet" href="/sol/faculty/css/analytics.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -41,7 +41,7 @@ $failedCounts = array_column($data, 'failed_count');
             <span class="nav-item">Dashboard</span>
         </a></li>
         <li><a href="\sol\faculty\analytic\analytic.php">
-            <i class="fas fa-user"></i>
+            <i class="fas fa-chart-bar"></i>
             <span class="nav-item">Analytics</span>
         </a></li>
         <li><a href="\sol\index.php" class="logout"><i class="fas fa-sign-out-alt"></i>
@@ -51,8 +51,9 @@ $failedCounts = array_column($data, 'failed_count');
 </nav>
 
 </body>
-<canvas id="myChart" width="50" height="50"></canvas>
-
+<div class="chart-container" style="width: 500px; height: 300px;">
+  <canvas id="myChart"></canvas>
+</div>
 <script>
 const data = {
   labels: <?php echo json_encode($subIDs); ?>,

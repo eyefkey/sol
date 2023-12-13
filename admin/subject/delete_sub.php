@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <form method="post" action="">
         <label for="sub_ID">Enter Subject Code to Delete:</label>
         <input type="text" id="sub_ID" name="sub_ID" value="<?php echo $subjectCodeToDelete; ?>" required>
-        <button type="submit">Delete Subject</button>
+        <input type="submit" name="" value="Delete">
     </form>
 
     <?php

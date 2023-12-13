@@ -34,7 +34,7 @@ if ($conn->connect_error) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faculty Dashboard</title>
-    <link rel="stylesheet" href="/sol/faculty/css/faculty.css"/>
+    <link rel="stylesheet" href="/sol/faculty/css/dashboard.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
 </head>
 <body>
@@ -97,7 +97,7 @@ if ($conn->connect_error) {
                 <span class="nav-item">Dashboard</span>
             </a></li>
             <li><a href="\sol\faculty\analytic\analytic.php">
-                <i class="fas fa-user"></i>
+                <i class="fas fa-chart-bar"></i>
                 <span class="nav-item">Analytics</span>
             </a></li>
             <li><a href="\sol\index.php" class="logout"><i class="fas fa-sign-out-alt"></i>

@@ -64,7 +64,7 @@ $conn->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Task</title>
     <!-- Include your CSS stylesheets or link to external stylesheets here -->
-    <link rel="stylesheet" href="/sol/faculty/css/faculty.css"/>
+    <link rel="stylesheet" href="/sol/faculty/css/add.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
 </head>
 <body>
@@ -83,10 +83,10 @@ $conn->close();
                 <label for="act_name">Activity Date:</label>
                 <input type="date" name="act_name" required>
 
-                <label for="task_description">Task Description:</label>
-                <textarea name="task_description" rows="4" required></textarea>
+                <label for="score">Activity Score:</label>
+                <input type="text" name="score" required>
 
-                <button type="submit">Add Task</button>
+                <button type="submit">Add Activity</button>
             </form>
         </section>
     </main>
@@ -104,7 +104,7 @@ $conn->close();
                 <span class="nav-item">Dashboard</span>
             </a></li>
             <li><a href="\sol\faculty\analytic\analytic.php">
-                <i class="fas fa-user"></i>
+                <i class="fas fa-chart-bar"></i>
                 <span class="nav-item">Analytics</span>
             </a></li>
             <li><a href="\sol\index.php" class="logout"><i class="fas fa-sign-out-alt"></i>

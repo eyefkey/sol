@@ -65,7 +65,7 @@ $resultSubjects = mysqli_query($conn, $select);
         <section class="table__header">
             <h1>Subject Management</h1>
             <div class="export__file">
-    <label for="export-file" class="export__file-btn" title="Export File"></label>
+    <label for="export-file" class="export__file-btn" title="Select Options"></label>
     <input type="checkbox" id="export-file">
     <div class="export__file-options">
         <label>Select: &nbsp; &#10140;</label>

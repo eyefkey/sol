@@ -61,13 +61,12 @@ $resultAllIDs = mysqli_query($conn, $selectQueryAllIDs);
             }
             ?>
         </select>
-        <button type="submit" name="delete_student">Delete Student</button>
+        <input type="submit" name="delete_student" value="Delete Student">
     </form>
 
     <?php if ($message): ?>
         <p><?php echo $message; ?></p>
     <?php endif; ?>
 
-    <p><a href="students.php">Back to Students</a></p>
 </body>
 </html>

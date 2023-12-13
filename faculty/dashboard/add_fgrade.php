@@ -57,7 +57,7 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Final Grade</title>
-    <link rel="stylesheet" href="/sol/faculty/css/faculty.css" />
+    <link rel="stylesheet" href="/sol/faculty/css/add_fgrade.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 </head>
 
@@ -68,6 +68,7 @@ $conn->close();
             <h1>Add Final Grade</h1>
         </section>
         <section class="form__body">
+        <div class="grade-form-container">
             <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
                 <input type="hidden" name="rec_ID" value="<?php echo htmlspecialchars($_GET['rec_ID']); ?>">
                 <input type="hidden" name="sub_ID" value="<?php echo htmlspecialchars($_GET['sub_ID']); ?>">
@@ -80,6 +81,7 @@ $conn->close();
 
                 <button type="submit">Add Grade</button>
             </form>
+        </div>
         </section>
     </main>
     <nav>
@@ -95,7 +97,7 @@ $conn->close();
                     <span class="nav-item">Dashboard</span>
                 </a></li>
             <li><a href="\sol\faculty\analytic\analytic.php">
-                    <i class="fas fa-user"></i>
+                    <i class="fas fa-chart-bar"></i>
                     <span class="nav-item">Analytics</span>
                 </a></li>
             <li><a href="\sol\index.php" class="logout">
