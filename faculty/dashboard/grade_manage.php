@@ -34,13 +34,9 @@ if (isset($_GET['rec_ID'])) {
     // Retrieve grades for the given rec_ID
     $selectGrades = "SELECT * FROM grade_info WHERE rec_ID = '$recID'";
     $resultGrades = mysqli_query($conn, $selectGrades);
-
-    // Check if the query was successful
-    if ($resultGrades !== false && mysqli_num_rows($resultGrades) > 0) {
         ?>
         <!DOCTYPE html>
         <html lang="en">
-
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -74,22 +70,18 @@ if (isset($_GET['rec_ID'])) {
                             </tr>
                         </thead>
                         <tbody>
-                            <?php
-                            // Output data of each row
-                            while ($row = mysqli_fetch_assoc($resultGrades)) {
-                                echo "<td>" . $row['final_grade'] . "</td>";
-                                echo "<td>" . $row['remarks'] . "</td></tr>";
-                            }
-                            ?>
-                            <?php
-    } else {
-        echo "<div class='no-grades-message'>No grades found for the specified record.</div>";
+                        <?php
+if ($resultGrades !== false && mysqli_num_rows($resultGrades) > 0) {
+    // Output data of each row
+    while ($row = mysqli_fetch_assoc($resultGrades)) {
+        echo "<tr>";  // Start the table row here
+        echo "<td>" . $row['final_grade'] . "</td>";
+        echo "<td>" . $row['remarks'] . "</td>";
+        echo "</tr>";  // Close the table row here
     }
 } else {
-    echo "Invalid request. Please provide a rec_ID.";
-}
-
-// Close the database connection
+    echo "<tr><td colspan='2'>No grades found for the specified record.</td></tr>";
+} }
 $conn->close();
 ?>
                 </tbody>
@@ -119,5 +111,4 @@ $conn->close();
         </ul>
     </nav>
 </body>
-
 </html>
