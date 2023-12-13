@@ -668,6 +668,18 @@ tbody td.active {
   background-color: rgba(0, 0, 0, 0.5);
 }
 .modal-content1 {
+  border-radius: 5px;
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.modal-content{
+  border-radius: 5px;
   background-color: #fff;
   margin: 15% auto;
   padding: 20px;

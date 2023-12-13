@@ -695,7 +695,29 @@ tbody td.active {
   width: 50px;
 }
 
-.chart-container{
-  margin-left: auto;
+.chart-container1{
+  display: inline-block;
+  background-color: white;
+  margin-left: 230px;
+  border-radius: 5px;
+  margin-top: 50px;
   margin-right: auto;
+}
+
+.chart-container2{
+  display: inline-block;
+  background-color: white;
+  margin-left: 50px;
+  border-radius: 5px;
+  margin-bottom: 100px;
+  margin-right: auto;
+}
+
+.room{
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0.4rem 0.8rem #0005;
+  width: 80%;
+  margin-left: 190px;
+  margin-top: 100px;
 }

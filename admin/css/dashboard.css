@@ -670,6 +670,7 @@ tbody td.active {
 }
 
 .modal-content {
+  border-radius: 5px;
   background-color: #fefefe;
   margin: 15% auto;
   padding: 20px;

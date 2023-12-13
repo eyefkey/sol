@@ -667,7 +667,8 @@ tbody td.active {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
 }
-.modal-content1 {
+.modal-content {
+  border-radius: 5px;
   background-color: #fff;
   margin: 15% auto;
   padding: 20px;
