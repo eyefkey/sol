@@ -75,6 +75,7 @@ if ($result && mysqli_num_rows($result) > 0) {
     <title>Edit Student</title>
 </head>
 <body>
+    <h1>Edit Students</h1>
     <form name="edit" method="post" action="">
         <label for="stud_ID">Student ID:</label>
         <input type="text" name="stud_ID" value="<?php echo $stud_ID; ?>" required>
