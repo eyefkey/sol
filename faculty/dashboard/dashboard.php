@@ -41,16 +41,6 @@ if ($conn->connect_error) {
 <main class="table">
         <section class="table__header">
             <h1>Dashboard</h1>
-            <div class="export__file">
-    <label for="export-file" class="export__file-btn" title="Export File"></label>
-    <input type="checkbox" id="export-file">
-    <div class="export__file-options">
-        <label>Select: &nbsp; &#10140;</label>
-        <label for="export-file" id="toPDF" onclick="openModal()">Add Employee<img src="images/pdf.png" alt=""></label>
-        <label for="export-file" id="toJSON" onclick="editModal()">Edit Employee<img src="images/json.png" alt=""></label>
-        <label for="export-file" id="toCSV" onclick="deleteModal()">Delete Employee<img src="images/csv.png" alt=""></label>
-    </div>
-        </div>
     </section>
         <section class="table__body">
             <table>
