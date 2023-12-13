@@ -102,18 +102,18 @@ $result = $conn->query($sql);
                     <span class="nav-item"> SOL - CRMS</span>
                 </a>
             </li>
-            <li><a href="\sol\admin\dashboard\dashboard.php">
+            <li><a href="\sol\admin\dashboard\dashboard">
                 <i class="fas fa-home"></i>
                 <span class="nav-item">Dashboard</span>
             </a></li>
-            <li><a href="\sol\admin\student\student.php">
+            <li><a href="\sol\admin\student\student">
                 <i class="fas fa-user"></i>
                 <span class="nav-item">Student  </span>
             </a></li>
-            <li><a href="\sol\admin\subject\subject.php"><i class="fas fa-tasks"></i>
+            <li><a href="\sol\admin\subject\subject"><i class="fas fa-tasks"></i>
                 <span class="nav-item">Subject</span>
             </a></li>
-            <li><a href="\sol\index.php" class="logout"><i class="fas fa-sign-out-alt"></i>
+            <li><a href="\sol\" class="logout"><i class="fas fa-sign-out-alt"></i>
                 <span class="nav-item">Log out</span>
             </a></li>
         </ul>

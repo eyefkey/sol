@@ -1,0 +1,18 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /sol/
+
+    # Rewrite rule for http://localhost/sol/index
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+    # Rewrite rule for http://localhost/sol/admin/dashboard/dashboard
+    RewriteRule ^admin/dashboard/dashboard$ admin/dashboard/dashboard.php [NC,L]
+
+    # Rewrite rule for http://localhost/sol/admin/student/student
+    RewriteRule ^admin/student/student$ admin/student/student.php [NC,L]
+
+    # Rewrite rule for http://localhost/sol/admin/subject/subject
+    RewriteRule ^admin/subject/subject$ admin/subject/subject.php [NC,L]
+</IfModule>
