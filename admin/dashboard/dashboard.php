@@ -30,7 +30,7 @@ $result = $conn->query($sql);
 <body>
     <main class="table">
         <section class="table__header">
-            <h1>Employee</h1>
+            <h1>Employee Management</h1>
             <div class="export__file">
     <label for="export-file" class="export__file-btn" title="Select Options"></label>
     <input type="checkbox" id="export-file">
@@ -81,7 +81,7 @@ $result = $conn->query($sql);
             </li>
             <li><a href="\sol\admin\dashboard\dashboard">
                 <i class="fas fa-home"></i>
-                <span class="nav-item">Dashboard</span>
+                <span class="nav-item">Employee</span>
             </a></li>
             <li><a href="\sol\admin\student\student">
                 <i class="fas fa-user"></i>

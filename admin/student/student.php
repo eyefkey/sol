@@ -107,7 +107,7 @@ $result = $conn->query($sql);
             </li>
             <li><a href="\sol\admin\dashboard\dashboard">
                 <i class="fas fa-home"></i>
-                <span class="nav-item">Dashboard</span>
+                <span class="nav-item">Employee</span>
             </a></li>
             <li><a href="\sol\admin\student\student">
                 <i class="fas fa-user"></i>
