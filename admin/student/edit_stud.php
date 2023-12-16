@@ -38,10 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["update"])) {
                          WHERE stud_ID='$stud_ID'";
 
         if ($mysqli->query($update_query) === TRUE) {
-            echo "Record updated successfully";
-
-            // Redirect to the student listing page
-            header('location: /sol/admin/dashboard/dashboard.php');
+            header('location: /sol/admin/student/student.php');
             exit();
         } else {
             echo "Error updating record: " . $mysqli->error;

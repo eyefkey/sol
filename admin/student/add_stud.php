@@ -26,15 +26,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $insertQuery = "INSERT INTO student_info (stud_ID, stud_fname, stud_mname, stud_lname, yr_lvl, semester, section, email_add)
                         VALUES ('$studID', '$fname', '$mname', '$lname', '$yrLvl', '$semester', '$section', '$email')";
 
-        if (mysqli_query($conn, $insertQuery)) {
-           
-            header('location: /sol/admin/dashboard/dashboard.php');
+        if (mysqli_query($conn, $insertQuery)) {     
+            header('location: /sol/admin/student/student.php');
             exit();
         } else {
             $message = "Error: " . mysqli_error($conn);
         }
     }
-
 }
 ?>
 
@@ -87,7 +85,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <label for="stud_fname">First Name:</label>
         <input type="text" id="stud_fname" name="stud_fname" required><br>
         
-        <label for="stud_mname">Middle Name:</label>
+        <label for="stud_mname">Middle Initial:</label>
         <input type="text" id="stud_mname" name="stud_mname"><br>
         
         <label for="stud_lname">Last Name:</label>

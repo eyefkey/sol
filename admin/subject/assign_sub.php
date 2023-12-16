@@ -101,7 +101,7 @@ $resultSubjects = mysqli_query($conn, $select);
 </style>
     <h2>Assign Subject</h2>
     <form action="" method="post" id="facultyForm">
-        <label for="emp_ID">Faculty ID:</label><br>
+        <label for="emp_ID">Employee ID:</label><br>
         <input type="text" id="emp_ID" name="emp_ID" required><br>
 
         <label for="sub_ID">Subject Code:</label><br>

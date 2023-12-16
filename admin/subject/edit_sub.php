@@ -55,10 +55,10 @@ if ($result && mysqli_num_rows($result) > 0) {
 <body>
     <h1>Edit Subjects</h1>
     <form name="edit" method="post" action="edit_proc.php">
-        <label for="sub_ID">Sub ID:</label>
+        <label for="sub_ID">Subject Code:</label>
         <input type="text" name="sub_ID" value="<?php echo $sub_ID; ?>" required>
         <br>
-        <label for="emp_ID">Emp ID:</label>
+        <label for="emp_ID">Employee ID:</label>
         <input type="text" name="emp_ID" value="<?php echo $emp_ID; ?>" required>
         <br>
         <label for="sub_name">Subject Name:</label>

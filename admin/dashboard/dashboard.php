@@ -36,9 +36,9 @@ $result = $conn->query($sql);
     <input type="checkbox" id="export-file">
     <div class="export__file-options">
         <label>Select: &nbsp; &#10140;</label>
-        <label for="export-file" id="toPDF" onclick="openModal()">Add Employee<img src="images/pdf.png" alt=""></label>
-        <label for="export-file" id="toJSON" onclick="editModal()">Edit Employee<img src="images/json.png" alt=""></label>
-        <label for="export-file" id="toCSV" onclick="deleteModal()">Delete Employee<img src="images/csv.png" alt=""></label>
+        <label for="export-file" id="toPDF" onclick="openModal()">Add Employee<img src="" alt=""></label>
+        <label for="export-file" id="toJSON" onclick="editModal()">Edit Employee<img src="" alt=""></label>
+        <label for="export-file" id="toCSV" onclick="deleteModal()">Delete Employee<img src="" alt=""></label>
     </div>
 </div>
 

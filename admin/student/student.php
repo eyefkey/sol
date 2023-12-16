@@ -27,23 +27,26 @@ $result = $conn->query($sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/sol/admin/css/students.css"/>
+    <link rel="stylesheet" href="/sol/admin/css/student.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
 </head>
 <body>
     <main class="table">
         <section class="table__header">
             <h1>Students Management</h1>
+            <div class="reload-btn">
+                <button onclick="reloadPage()"><i class="fas fa-sync"></i></button>
+            </div>
             <div class="export__file">
     <label for="export-file" class="export__file-btn" title="Select Options"></label>
     <input type="checkbox" id="export-file">
     <div class="export__file-options">
         <label>Select: &nbsp; &#10140;</label>
-        <label for="export-file" id="toPDF" onclick="openImportModal()">Import Students<img src="images/pdf.png" alt=""></label>
-        <label for="export-file" id="toCSV" onclick="assignSubjectsModal()">Assign Subject<img src="images/csv.png" alt=""></label>
-        <label for="export-file" id="toPDF" onclick="addStudentsModal()">Add Student<img src="images/pdf.png" alt=""></label>
-        <label for="export-file" id="toJSON" onclick="editStudentsModal()">Edit Student<img src="images/json.png" alt=""></label>
-        <label for="export-file" id="toCSV" onclick="deleteStudentsModal()">Delete Student<img src="images/csv.png" alt=""></label>
+        <label for="export-file" id="toPDF" onclick="openImportModal()">Import Students<img src="" alt=""></label>
+        <label for="export-file" id="toCSV" onclick="assignSubjectsModal()">Assign Subject<img src="" alt=""></label>
+        <label for="export-file" id="toPDF" onclick="addStudentsModal()">Add Student<img src="" alt=""></label>
+        <label for="export-file" id="toJSON" onclick="editStudentsModal()">Edit Student<img src="" alt=""></label>
+        <label for="export-file" id="toCSV" onclick="deleteStudentsModal()">Delete Student<img src="" alt=""></label>
     </div>
 </div>
         </section>
@@ -171,6 +174,10 @@ $result = $conn->query($sql);
         var modal = document.getElementById('deleteStudentModal');
         modal.style.display = 'none';
         }
+
+        function reloadPage() {
+        location.reload(true); // Pass true to force a reload from the server, ignoring the cache
+        }
     </script>
 
     <div id="assignSubjectModal" class="modal">
@@ -230,5 +237,5 @@ $result = $conn->query($sql);
             <?php include 'delete_stud.php'; ?>
         </div>
     </div>
-</body>
+</body> 
 </html>

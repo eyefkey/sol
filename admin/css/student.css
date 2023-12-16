@@ -746,3 +746,26 @@ tbody td.active {
 h1{
   text-align: center;
 }
+
+.reload-btn{
+  margin-top: 15px;
+  margin-left: 700px;
+  width: 10px;
+  background-color: wo;
+}
+
+.reload-btn button {
+  background-color: #3498db; /* Button background color */
+  color: #ffffff; /* Button text color */
+  padding: 2px 3px; /* Adjust padding as needed */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.reload-btn button i {
+  margin-bottom: 5px; /* Adjust the spacing between the icon and text */
+}
+.reload-btn button:hover {
+  background-color: #2980b9; /* Change the background color on hover */
+}
