@@ -20,17 +20,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_student'])) {
 
         if (mysqli_query($conn, $deleteQuery)) {
             $message = "Student deleted successfully.";
-        
-            // Check if the session variable is not set (indicating the first time)
-            if (!isset($_SESSION['reload'])) {
-                // Set the session variable
-                $_SESSION['reload'] = true;
-        
-                // Redirect to the same page after a delay
-                header("refresh:2;url=your_page.php"); // Change 'your_page.php' to your actual page
-                echo "The page will refresh in 2 seconds.";
+             header ('location: /sol/admin/dashboard/dashboard.php');
                 exit();
-            }
+            
         } else {
             $message = "Error: " . mysqli_error($conn);
         }
@@ -70,3 +62,4 @@ $resultAllIDs = mysqli_query($conn, $selectQueryAllIDs);
 
 </body>
 </html>
+    

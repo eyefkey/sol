@@ -28,12 +28,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if (mysqli_query($conn, $insertQuery)) {
            
-            header('location: /sol/admin/student/student.php');
+            header('location: /sol/admin/dashboard/dashboard.php');
             exit();
         } else {
             $message = "Error: " . mysqli_error($conn);
         }
     }
+
 }
 ?>
 
