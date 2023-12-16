@@ -45,10 +45,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Personnel</title>
+    <title>Edit Employee</title>
 </head>
 <body>
-    <h2>Edit Personnel</h2>
+    <h2>Edit Employee</h2>
     <form action="edit_emp.php" method="post">
         <input type="text" name="emp_fname" placeholder="First Name" required><br><br>
         <input type="text" name="emp_mname" placeholder="Middle Initial" required><br><br>
