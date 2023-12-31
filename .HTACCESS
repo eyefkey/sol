@@ -19,4 +19,9 @@
 
         RewriteRule ^admin124106/analytic/analysis$ admin124106/analytic/analysis.php [NC,L]
 
+        <FilesMatch "\.php$">
+        Order Deny,Allow
+        Deny from all
+        </FilesMatch>
+        
     </IfModule>
