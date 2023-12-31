@@ -97,10 +97,6 @@ if (isset($_GET['rec_ID'])){
                     <i class="fas fa-home"></i>
                     <span class="nav-item">Dashboard</span>
                 </a></li>
-            <li><a href="\sol\faculty\analytic\analytic.php">
-                    <i class="fas fa-chart-bar"></i>
-                    <span class="nav-item">Analytics</span>
-                </a></li>
             <li><a href="\sol\index.php" class="logout">
                     <i class="fas fa-sign-out-alt"></i>
                     <span class="nav-item">Log out</span>

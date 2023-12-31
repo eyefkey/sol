@@ -15,4 +15,6 @@
 
     # Rewrite rule for http://localhost/sol/admin/subject/subject
     RewriteRule ^admin/subject/subject$ admin/subject/subject.php [NC,L]
+
+    RewriteRule ^admin/analytic/analysis$ admin/analytic/analysis.php [NC,L]
 </IfModule>

@@ -126,6 +126,9 @@ $resultSubjects = mysqli_query($conn, $select);
             <li><a href="\sol\admin\subject\subject"><i class="fas fa-tasks"></i>
                 <span class="nav-item">Subject</span>
             </a></li>
+            <li><a href="\sol\admin\analytics\analysis"><i class="fas fa-chart-bar"></i>
+                <span class="nav-item">Analysis</span>
+            </a></li>
             <li><a href="\sol\" class="logout"><i class="fas fa-sign-out-alt"></i>
                 <span class="nav-item">Log out</span>
             </a></li>

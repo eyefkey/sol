@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 $query = $conn->query("SELECT r.sub_ID, 
     COUNT(CASE WHEN g.final_grade >= 75 THEN g.rec_ID END) as passed_count, 
     COUNT(CASE WHEN g.final_grade < 75 THEN g.rec_ID END) as failed_count 
-    FROM rec_info r JOIN grade_info g ON r.rec_ID = g.rec_ID 
+    FROM rec_info r LEFT JOIN grade_info g ON r.rec_ID = g.rec_ID 
     GROUP BY r.sub_ID");
 
 $data = $query->fetch_all(MYSQLI_ASSOC);
@@ -65,14 +65,15 @@ $enrolledStudentsCounts = array_column($enrollmentData, 'enrolled_students_count
 </nav>
 
 <div class="room">
-<div class="chart-container1" style="width: 400px; height: 400px;">
-    <canvas id="polarChart"></canvas>
+    <div class="chart-container1" style="width: 400px; height: 400px;">
+        <canvas id="polarChart"></canvas>
+    </div>
+
+    <div class="chart-container2" style="width: 400px; height: 200px;">
+        <canvas id="barChart"></canvas>
+    </div>
 </div>
 
-<div class="chart-container2" style="width: 400px; height: 200px;">
-    <canvas id="lineChart"></canvas>
-</div>
-</div>
 <script>
 const polarData = {
     labels: <?php echo json_encode($subIDs); ?>,
@@ -80,12 +81,12 @@ const polarData = {
         label: 'Students Passed',
         data: <?php echo json_encode($passedCounts); ?>,
         backgroundColor: [
-        'rgb(255, 99, 132)',
-        'rgb(75, 192, 192)',
-        'rgb(255, 205, 86)',
-        'rgb(201, 203, 207)',
-        'rgb(54, 162, 235)'
-      ],
+            'rgb(255, 99, 132)',
+            'rgb(75, 192, 192)',
+            'rgb(255, 205, 86)',
+            'rgb(201, 203, 207)',
+            'rgb(54, 162, 235)'
+        ],
         borderWidth: 1
     }]
 };
@@ -102,20 +103,19 @@ const polarConfig = {
     }
 };
 
-const lineData = {
+const barData = {
     labels: <?php echo json_encode($subIDs); ?>,
     datasets: [{
         label: 'Enrolled Students',
         data: <?php echo json_encode($enrolledStudentsCounts); ?>,
-        fill: false,
-        borderColor: 'rgb(75, 192, 192)',
-        tension: 0.1
+        backgroundColor: 'rgb(75, 192, 192)',
+        borderWidth: 1
     }]
 };
 
-const lineConfig = {
-    type: 'line',
-    data: lineData,
+const barConfig = {
+    type: 'bar',
+    data: barData,
     options: {
         scales: {
             y: {
@@ -131,9 +131,9 @@ var polarChart = new Chart(
     polarConfig
 );
 
-var lineChart = new Chart(
-    document.getElementById('lineChart'),
-    lineConfig
+var barChart = new Chart(
+    document.getElementById('barChart'),
+    barConfig
 );
 </script>
 </body>
