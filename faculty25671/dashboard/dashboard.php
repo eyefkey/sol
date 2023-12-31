@@ -34,7 +34,7 @@ if ($conn->connect_error) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faculty Dashboard</title>
-    <link rel="stylesheet" href="/sol/faculty/css/dashboard.css"/>
+    <link rel="stylesheet" href="/sol/faculty25671/css/dashboard.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
 </head>
 <body>
@@ -69,7 +69,7 @@ if ($conn->connect_error) {
             echo "<tr><td>" . $row['sub_ID'] . "</td><td>" . $row['sub_name'] . "</td><td>" . $row['semester'] . "</td><td>" . $row['units'] . "</td><td>" . $row['school_year'] . "</td>";
 
             // Add the "Manage" action link with a dynamic URL
-            echo "<td><a class='action-link' href='/sol/faculty/dashboard/student_manage.php?sub_ID=" . $row['sub_ID'] . "'>Manage</a></td></tr>";
+            echo "<td><a class='action-link' href='/sol/faculty25671/dashboard/student_manage.php?sub_ID=" . $row['sub_ID'] . "'>Manage</a></td></tr>";
 
         }
         
@@ -92,11 +92,11 @@ if ($conn->connect_error) {
                     <span class="nav-item"> SOL - CRMS</span>
                 </a>
             </li>
-            <li><a href="\sol\faculty\dashboard\dashboard.php">
+            <li><a href="\sol\faculty25671\dashboard\dashboard">
                 <i class="fas fa-home"></i>
                 <span class="nav-item">Dashboard</span>
             </a></li>
-            <li><a href="\sol\index.php" class="logout"><i class="fas fa-sign-out-alt"></i>
+            <li><a href="\sol\" class="logout"><i class="fas fa-sign-out-alt"></i>
                 <span class="nav-item">Log out</span>
             </a></li>
         </ul>

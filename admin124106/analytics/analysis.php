@@ -50,17 +50,23 @@ $enrolledStudentsCounts = array_column($enrollmentData, 'enrolled_students_count
                 <span class="nav-item"> SOL - CRMS</span>
             </a>
         </li>
-        <li><a href="\sol\faculty\dashboard\dashboard.php">
-            <i class="fas fa-home"></i>
-            <span class="nav-item">Dashboard</span>
-        </a></li>
-        <li><a href="\sol\faculty\analytic\analytic.php">
-            <i class="fas fa-chart-bar"></i>
-            <span class="nav-item">Analytics</span>
-        </a></li>
-        <li><a href="\sol\index.php" class="logout"><i class="fas fa-sign-out-alt"></i>
-            <span class="nav-item">Log out</span>
-        </a></li>
+        <li><a href="\sol\admin124106\dashboard\dashboard">
+                <i class="fas fa-home"></i>
+                <span class="nav-item">Employee</span>
+            </a></li>
+            <li><a href="\sol\admin124106\student\student">
+                <i class="fas fa-user"></i>
+                <span class="nav-item">Student</span>
+            </a></li>
+            <li><a href="\sol\admin124106\subject\subject"><i class="fas fa-tasks"></i>
+                <span class="nav-item">Subject</span>
+            </a></li>
+            <li><a href="\sol\admin124106\analytics\analysis"><i class="fas fa-chart-bar"></i>
+                <span class="nav-item">Analysis</span>
+            </a></li>
+            <li><a href="\sol\" class="logout"><i class="fas fa-sign-out-alt"></i>
+                <span class="nav-item">Log out</span>
+            </a></li>
     </ul>
 </nav>
 

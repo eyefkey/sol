@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manage Students</title>
-    <link rel="stylesheet" href="/sol/faculty/css/student_manages.css" />
+    <link rel="stylesheet" href="/sol/faculty25671/css/student_manages.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 </head>
 
@@ -77,7 +77,7 @@
                             echo "<td>" . $fullName . "</td>";
                             echo "<td>";
                             if (isset($row['rec_ID'])) {
-                                echo "<a class='action-link' href='/sol/faculty/dashboard/grade_manage.php?rec_ID=" . $row['rec_ID'] ."&sub_ID"."=".$sub_ID. "'>Manage</a>";
+                                echo "<a class='action-link' href='/sol/faculty25671/dashboard/grade_manage.php?rec_ID=" . $row['rec_ID'] ."&sub_ID"."=".$sub_ID. "'>Manage</a>";
                             } else {
                                 echo "N/A";
                             }
@@ -103,11 +103,11 @@
                     <span class="nav-item">SOL - CRMS</span>
                 </a>
             </li>
-            <li><a href="\sol\faculty\dashboard\dashboard.php">
+            <li><a href="\sol\faculty25671\dashboard\dashboard">
                     <i class="fas fa-home"></i>
                     <span class="nav-item">Dashboard</span>
                 </a></li>
-            <li><a href="\sol\index.php" class="logout">
+            <li><a href="\sol\" class="logout">
                     <i class="fas fa-sign-out-alt"></i>
                     <span class="nav-item">Log out</span>
                 </a></li>

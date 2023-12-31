@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])) {
 
         if ($conn->query($insert_query) === TRUE) {
             // If the data is successfully inserted, redirect the user back to the dashboard table page
-            header("Location: /sol/admin/dashboard/dashboard.php");
+            header("Location: /sol/admin124106/dashboard/dashboard.php");
             exit();
         } else {
             // If an error occurs during the insertion, display an error message

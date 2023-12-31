@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])) {
 
     if ($conn->query($update_query) === TRUE) {
         // If the data is successfully updated, redirect the user back to the personnel table page or the desired location
-        header("Location: /sol/admin/dashboard/dashboard.php"); // Replace with the appropriate URL
+        header("Location: /sol/admin124106/dashboard/dashboard.php"); // Replace with the appropriate URL
         exit();
     } else {
         // If an error occurs during the update, display an error message

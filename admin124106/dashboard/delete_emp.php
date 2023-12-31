@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($conn->query($delete_query) === TRUE) {
         // If the record is successfully deleted, redirect to index.php
-        header("Location: /sol/admin/dashboard/dashboard.php");
+        header("Location: /sol/admin124106/dashboard/dashboard.php");
         exit();
     } else {
         echo "Error deleting record: " . $conn->error;

@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["update"])) {
     if ($mysqli->query($update_query) === TRUE) {
         echo "Record updated successfully";
 
-        header('location: /sol/admin/subject/subject.php');
+        header('location: /sol/admin124106/subject/subject.php');
         exit();
     } else {
         echo "Error updating record: " . $mysqli->error;

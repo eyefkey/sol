@@ -24,7 +24,7 @@ $result = $conn->query($sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/sol/admin/css/dashboard.css"/>
+    <link rel="stylesheet" href="/sol/admin124106/css/dashboard.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
 </head>
 <body>
@@ -79,18 +79,18 @@ $result = $conn->query($sql);
                     <span class="nav-item"> SOL - CRMS</span>
                 </a>
             </li>
-            <li><a href="\sol\admin\dashboard\dashboard">
+            <li><a href="\sol\admin124106\dashboard\dashboard">
                 <i class="fas fa-home"></i>
                 <span class="nav-item">Employee</span>
             </a></li>
-            <li><a href="\sol\admin\student\student">
+            <li><a href="\sol\admin124106\student\student">
                 <i class="fas fa-user"></i>
                 <span class="nav-item">Student</span>
             </a></li>
-            <li><a href="\sol\admin\subject\subject"><i class="fas fa-tasks"></i>
+            <li><a href="\sol\admin124106\subject\subject"><i class="fas fa-tasks"></i>
                 <span class="nav-item">Subject</span>
             </a></li>
-            <li><a href="\sol\admin\analytics\analysis"><i class="fas fa-chart-bar"></i>
+            <li><a href="\sol\admin124106\analytics\analysis"><i class="fas fa-chart-bar"></i>
                 <span class="nav-item">Analysis</span>
             </a></li>
             <li><a href="\sol\" class="logout"><i class="fas fa-sign-out-alt"></i>

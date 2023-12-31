@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["update"])) {
                          WHERE stud_ID='$stud_ID'";
 
         if ($mysqli->query($update_query) === TRUE) {
-            header('location: /sol/admin/student/student.php');
+            header('location: /sol/admin124106/student/student.php');
             exit();
         } else {
             echo "Error updating record: " . $mysqli->error;

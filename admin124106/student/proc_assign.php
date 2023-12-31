@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $conn->close();
 
         // Redirect to student.php
-        header('location: /sol/admin/student/student.php');
+        header('location: /sol/admin124106/student/student.php');
         exit();
     } else {
         echo "Error: " . $insertAssignment . "<br>" . $conn->error;

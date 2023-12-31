@@ -41,7 +41,7 @@ if (isset($_GET['rec_ID'])) {
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Grade Management</title>
-            <link rel="stylesheet" href="/sol/faculty/css/grade.css" />
+            <link rel="stylesheet" href="/sol/faculty25671/css/grade.css" />
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
         </head>
 
@@ -51,14 +51,14 @@ if (isset($_GET['rec_ID'])) {
                     <h1>Grade Management</h1>
                     <div class="button1">
 
-                        <a href="/sol/faculty/dashboard/add_fgrade.php?rec_ID=<?php echo $recID."&sub_ID=".$sub_ID; ?>"
+                        <a href="/sol/faculty25671/dashboard/add_fgrade.php?rec_ID=<?php echo $recID."&sub_ID=".$sub_ID; ?>"
                             style="--clr:#FF1818"><span>Add Final Grade</span><i></i></a>
                     </div>
 
-                    <div class="button2"><a href="/sol/faculty/dashboard/add_activity.php?rec_ID=<?php echo $recID. "&sub_ID=".$sub_ID;?>"
+                    <div class="button2"><a href="/sol/faculty25671/dashboard/add_activity.php?rec_ID=<?php echo $recID. "&sub_ID=".$sub_ID;?>"
                       style="--clr:#1e9bff"><span>Add Activity</span><i></i></a></div>
 
-                    <div class="button3"><a href="/sol/faculty/dashboard/view_score.php?rec_ID=<?php echo $recID. "&sub_ID=".$sub_ID;?>"
+                    <div class="button3"><a href="/sol/faculty25671/dashboard/view_score.php?rec_ID=<?php echo $recID. "&sub_ID=".$sub_ID;?>"
                      style="--clr:#39FF14"><span>View Score</span><i></i></a></div>
 
                 </section>
@@ -97,11 +97,11 @@ $conn->close();
                     <span class="nav-item"> SOL - CRMS</span>
                 </a>
             </li>
-            <li><a href="\sol\faculty\dashboard\dashboard.php">
+            <li><a href="\sol\faculty25671\dashboard\dashboard">
                     <i class="fas fa-home"></i>
                     <span class="nav-item">Dashboard</span>
                 </a></li>
-            <li><a href="\sol\index.php" class="logout">
+            <li><a href="\sol\" class="logout">
                     <i class="fas fa-sign-out-alt"></i>
                     <span class="nav-item">Log out</span>
                 </a></li>

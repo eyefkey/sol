@@ -57,7 +57,7 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Final Grade</title>
-    <link rel="stylesheet" href="/sol/faculty/css/add_fgrade.css" />
+    <link rel="stylesheet" href="/sol/faculty25671/css/add_fgrade.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 </head>
 
@@ -92,7 +92,7 @@ $conn->close();
                     <span class="nav-item"> SOL - CRMS</span>
                 </a>
             </li>
-            <li><a href="\sol\faculty\dashboard\dashboard.php">
+            <li><a href="\sol\faculty25671\dashboard\dashboard">
                     <i class="fas fa-home"></i>
                     <span class="nav-item">Dashboard</span>
                 </a></li>

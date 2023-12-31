@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         VALUES ('$studID', '$fname', '$mname', '$lname', '$yrLvl', '$semester', '$section', '$email')";
 
         if (mysqli_query($conn, $insertQuery)) {     
-            header('location: /sol/admin/student/student.php');
+            header('location: /sol/admin124106/student/student.php');
             exit();
         } else {
             $message = "Error: " . mysqli_error($conn);

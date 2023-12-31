@@ -34,11 +34,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($row['role'] == 'Admin') {
             $_SESSION['admin_ID'] = $row['emp_ID'];
-            header('location: /sol/admin/dashboard/dashboard');
+            header('location: /sol/admin124106/dashboard/dashboard');
             exit();
         } elseif ($row['role'] == 'Faculty') {
             $_SESSION['user_ID'] = $row['emp_ID'];
-            header('location: /sol/faculty/dashboard/dashboard.php');
+            header('location: /sol/faculty25671/dashboard/dashboard');
             exit();
         }
     } else {

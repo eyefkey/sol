@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_student'])) {
 
         if (mysqli_query($conn, $deleteQuery)) {
             $message = "Student deleted successfully.";
-             header ('location: /sol/admin/dashboard/dashboard.php');
+             header ('location: /sol/admin124106/dashboard/dashboard.php');
                 exit();
             
         } else {

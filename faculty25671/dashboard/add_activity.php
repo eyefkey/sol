@@ -64,7 +64,7 @@ $conn->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Task</title>
     <!-- Include your CSS stylesheets or link to external stylesheets here -->
-    <link rel="stylesheet" href="/sol/faculty/css/add.css"/>
+    <link rel="stylesheet" href="/sol/faculty25671/css/add.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
 </head>
 <body>
@@ -99,11 +99,11 @@ $conn->close();
                     <span class="nav-item"> SOL - CRMS</span>
                 </a>
             </li>
-            <li><a href="\sol\faculty\dashboard\dashboard.php">
+            <li><a href="\sol\faculty25671\dashboard\dashboard">
                 <i class="fas fa-home"></i>
                 <span class="nav-item">Dashboard</span>
             </a></li>
-            <li><a href="\sol\index.php" class="logout"><i class="fas fa-sign-out-alt"></i>
+            <li><a href="\sol\" class="logout"><i class="fas fa-sign-out-alt"></i>
                 <span class="nav-item">Log out</span>
             </a></li>
         </ul>
