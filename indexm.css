@@ -177,6 +177,7 @@ input[type="submit"]:active {
   padding: 20px;
   border: 1px solid #888;
   width: 20%;
+  border-radius: 20px;
 }
 
 .close {
@@ -184,7 +185,7 @@ input[type="submit"]:active {
   float: right;
   font-size: 28px;
   font-weight: bold;
-  margin-top: -25px;
+  margin-top: -15px;
 }
 
 .close:hover,
