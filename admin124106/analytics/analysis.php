@@ -37,7 +37,7 @@ $enrolledStudentsCounts = array_column($enrollmentData, 'enrolled_students_count
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/sol/faculty/css/analytic.css"/>
+    <link rel="stylesheet" href="/sol/admin124106/css/analytic.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
