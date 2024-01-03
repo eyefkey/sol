@@ -40,7 +40,7 @@ if ($conn->connect_error) {
 <body>
 <main class="table">
         <section class="table__header">
-            <h1>Dashboard</h1>
+            <h1>Home</h1>
     </section>
         <section class="table__body">
             <table>
@@ -94,7 +94,11 @@ if ($conn->connect_error) {
             </li>
             <li><a href="\sol\faculty25671\dashboard\dashboard">
                 <i class="fas fa-home"></i>
-                <span class="nav-item">Dashboard</span>
+                <span class="nav-item">Home</span>
+            </a></li>
+            <li><a href="\sol\faculty25671\logs\view.php">
+                <i class="fas fa-th-list"></i>
+                <span class="nav-item">Login Logs</span>
             </a></li>
             <li><a href="\sol\" class="logout"><i class="fas fa-sign-out-alt"></i>
                 <span class="nav-item">Log out</span>

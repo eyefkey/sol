@@ -1,6 +1,8 @@
 <?php
+require('timezone.php');
 // Start a session
 session_start();
+
 
 // Database connection
 $servername = "localhost";
@@ -14,6 +16,19 @@ $conn = mysqli_connect($servername, $username, $password, $database);
 // Check the connection
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
+}
+
+// Function to insert login activity
+function insertLoginActivity($empID, $description, $conn) {
+    // Generate the login activity date
+    $activityDate = date('Y-m-d H:i:s');
+
+    // Prepare and execute the SQL query to insert a new record into the activity_log table
+    $sql = "INSERT INTO activity_log (emp_ID, activity_description, activity_date) VALUES (?, ?, ?)";
+    $stmt = mysqli_prepare($conn, $sql);
+    mysqli_stmt_bind_param($stmt, "sss", $empID, $description, $activityDate);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
 }
 
 $error = ''; // Initialize an error variable
@@ -34,10 +49,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($row['role'] == 'Admin') {
             $_SESSION['admin_ID'] = $row['emp_ID'];
+            insertLoginActivity($_SESSION['admin_ID'], "Admin logged in", $conn);
             header('location: /sol/admin124106/dashboard/dashboard');
             exit();
         } elseif ($row['role'] == 'Faculty') {
             $_SESSION['user_ID'] = $row['emp_ID'];
+            insertLoginActivity($_SESSION['user_ID'], "Faculty logged in", $conn);
             header('location: /sol/faculty25671/dashboard/dashboard');
             exit();
         }

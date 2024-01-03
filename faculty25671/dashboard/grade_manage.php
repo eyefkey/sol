@@ -99,8 +99,12 @@ $conn->close();
             </li>
             <li><a href="\sol\faculty25671\dashboard\dashboard">
                     <i class="fas fa-home"></i>
-                    <span class="nav-item">Dashboard</span>
+                    <span class="nav-item">Home</span>
                 </a></li>
+            <li><a href="\sol\faculty25671\logs\view.php">
+                <i class="fas fa-th-list"></i>
+                <span class="nav-item">Login Logs</span>
+            </a></li>
             <li><a href="\sol\" class="logout">
                     <i class="fas fa-sign-out-alt"></i>
                     <span class="nav-item">Log out</span>

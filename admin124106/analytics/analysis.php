@@ -70,12 +70,16 @@ $enrolledStudentsCounts = array_column($enrollmentData, 'enrolled_students_count
     </ul>
 </nav>
 
+
+
 <div class="room">
-    <div class="chart-container1" style="width: 400px; height: 400px;">
+    <div class="chart-container1" style="width: 400px; height: 500px; margin-left: 150px;">
+    <h2>Student Pass</h2>
         <canvas id="polarChart"></canvas>
     </div>
 
     <div class="chart-container2" style="width: 400px; height: 200px;">
+    <h2>Overall Students Enrolled</h2>
         <canvas id="barChart"></canvas>
     </div>
 </div>
