@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (mysqli_query($conn, $insertActivity)) {
         // Activity added successfully, reload the current webpage using JavaScript
-        echo '<script>window.location.reload();</script>';
+        header('Location: dashboard.php');
         exit();
     } else {
         echo "Error: " . $insertActivity . "<br>" . mysqli_error($conn);
@@ -77,11 +77,11 @@ $conn->close();
                 <input type="hidden" name="rec_ID" value="<?php echo htmlspecialchars($_GET['rec_ID']); ?>">
                 <input type="hidden" name="sub_ID" value="<?php echo htmlspecialchars($_GET['sub_ID']);?> ">
 
-                <label for="sub_name">Activity Name:</label>
-                <input type="text" name="sub_name" required>
+                <label for="act_name">Activity Name:</label>
+                <input type="text" name="act_name" required>
 
-                <label for="act_name">Activity Date:</label>
-                <input type="date" name="act_name" required>
+                <label for="act_date">Activity Date:</label>
+                <input type="date" name="act_date" required>
 
                 <label for="score">Activity Score:</label>
                 <input type="text" name="score" required>
