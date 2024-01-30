@@ -3,6 +3,7 @@ require('timezone.php');
 // Start a session
 session_start();
 
+
 // Database connection
 $servername = "localhost";
 $username = "root";
@@ -34,15 +35,12 @@ $error = ''; // Initialize an error variable
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $emp_ID = $_POST['emp_ID']; // Updated to match the form field name
-    $password = $_POST['password']; // Updated to match the form field name
-
-    // Hash the password
-    $hashed_password = md5($password);
+    $pass = $_POST['password']; // Updated to match the form field name
 
     // Prevent SQL injection by using prepared statements
     $select = "SELECT * FROM user_info WHERE emp_ID = ? AND password = ?";
     $stmt = mysqli_prepare($conn, $select);
-    mysqli_stmt_bind_param($stmt, "ss", $emp_ID, $hashed_password);
+    mysqli_stmt_bind_param($stmt, "ss", $emp_ID, $pass);
     mysqli_stmt_execute($stmt);
     $result = mysqli_stmt_get_result($stmt);
 

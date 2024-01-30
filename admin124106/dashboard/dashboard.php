@@ -61,7 +61,7 @@ $result = $conn->query($sql);
                     <tr>
                         <td><?php echo $row['emp_lname']," ",$row['emp_fname']," ",$row['emp_mname']; ?></td>
                         <td><?php echo $row['emp_ID']; ?></td>
-                        <td><?php echo $row['password']; ?></td>
+                        <td><?php echo md5($row['password']); ?></td>
                         <td><?php echo $row['role']; ?></td>
                         <?php } }else{ ?>
                             <tr><td colspan="8">No Employee(s) found...</td></tr>
